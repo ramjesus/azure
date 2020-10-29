@@ -29,14 +29,7 @@
           "description": "Size of the virtual machine."
         }
       },
-      "location": {
-        "type": "string",
-        "defaultValue": "[resourceGroup().location]",
-        "metadata": {
-          "description": "Location for all resources."
-        }
-      },
-      "vmName": {
+          "vmName": {
         "type": "string",
         "defaultValue": "simple-vm",
         "metadata": {
@@ -44,17 +37,7 @@
         }
       }
     },
-    "variables": {
-      "storageAccountName": "[concat('bootdiags', uniquestring(resourceGroup().id))]",
-      "nicName": "myVMNic",
-      "addressPrefix": "10.0.0.0/16",
-      "subnetName": "Subnet",
-      "subnetPrefix": "10.0.0.0/24",
-      "virtualNetworkName": "MyVNET",
-      "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-      "networkSecurityGroupName": "default-NSG"
-    },
-    "resources": [
+        "resources": [
       {
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2019-06-01",
@@ -81,57 +64,7 @@
           }
         }
       },
-      {
-        "type": "Microsoft.Network/networkSecurityGroups",
-        "apiVersion": "2020-06-01",
-        "name": "[variables('networkSecurityGroupName')]",
-        "location": "[parameters('location')]",
-        "properties": {
-          "securityRules": [
-            {
-              "name": "default-allow-3389",
-              "properties": {
-                "priority": 1000,
-                "access": "Allow",
-                "direction": "Inbound",
-                "destinationPortRange": "3389",
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "type": "Microsoft.Network/virtualNetworks",
-        "apiVersion": "2020-06-01",
-        "name": "[variables('virtualNetworkName')]",
-        "location": "[parameters('location')]",
-        "dependsOn": [
-          "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
-        ],
-        "properties": {
-          "addressSpace": {
-            "addressPrefixes": [
-              "[variables('addressPrefix')]"
-            ]
-          },
-          "subnets": [
-            {
-              "name": "[variables('subnetName')]",
-              "properties": {
-                "addressPrefix": "[variables('subnetPrefix')]",
-                "networkSecurityGroup": {
-                  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
+          {
         "type": "Microsoft.Network/networkInterfaces",
         "apiVersion": "2020-06-01",
         "name": "[variables('nicName')]",
