@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "networkInterfaceName": {
+            "value": "segunda359"
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/565c00f0-066e-43b6-9bee-9cf93fe2b312/resourceGroups/activedirectory-rg/providers/Microsoft.Network/networkSecurityGroups/activedirectory-eastus2-nsg"
+        },
+        "subnetName": {
+            "value": "usa-vnet-identity-dc"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/565c00f0-066e-43b6-9bee-9cf93fe2b312/resourceGroups/rg-vnet-identity/providers/Microsoft.Network/virtualNetworks/usa-vnet-identity"
+        },
+        "virtualMachineName": {
+            "value": "segunda"
+        },
+        "virtualMachineComputerName": {
+            "value": "segunda"
+        },
+        "virtualMachineRG": {
+            "value": "activedirectory-rg"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "None",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "segunda_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "segunda_DataDisk_0",
+                    "sku": "Premium_LRS",
+                    "properties": {
+                        "diskSizeGB": 128,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_E2as_v4"
+        },
+        "adminUsername": {
+            "value": "serveradmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "zone": {
+            "value": "3"
+        }
+    }
+}
