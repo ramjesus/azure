@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus2"
+            "value": ""
         },
         "networkInterfaceName": {
-            "value": "segunda359"
+            "value": ""
         },
         "networkSecurityGroupId": {
             "value": "/subscriptions/565c00f0-066e-43b6-9bee-9cf93fe2b312/resourceGroups/activedirectory-rg/providers/Microsoft.Network/networkSecurityGroups/activedirectory-eastus2-nsg"
@@ -18,13 +18,13 @@
             "value": "/subscriptions/565c00f0-066e-43b6-9bee-9cf93fe2b312/resourceGroups/rg-vnet-identity/providers/Microsoft.Network/virtualNetworks/usa-vnet-identity"
         },
         "virtualMachineName": {
-            "value": "segunda"
+            "value": ""
         },
         "virtualMachineComputerName": {
-            "value": "segunda"
+            "value": ""
         },
         "virtualMachineRG": {
-            "value": "activedirectory-rg"
+            "value": ""
         },
         "osDiskType": {
             "value": "Premium_LRS"
