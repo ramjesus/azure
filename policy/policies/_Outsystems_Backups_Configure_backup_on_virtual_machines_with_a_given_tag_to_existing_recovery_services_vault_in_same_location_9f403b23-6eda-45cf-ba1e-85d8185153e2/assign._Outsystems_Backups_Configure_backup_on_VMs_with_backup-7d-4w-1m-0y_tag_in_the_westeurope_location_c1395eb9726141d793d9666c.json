@@ -21,9 +21,7 @@
     "value": "backup"
    },
    "inclusionTagValue": {
-    "value": [
-     "backup-7d-4w-1m-0y"
-    ]
+    "value": ["backup-7d-4w-1m-0y"]
    },
    "backupPolicyId": {
     "value": "/subscriptions/597f5083-f841-4bfd-b55c-52171610014b/resourcegroups/backupvault-westeurope-1-rg/providers/microsoft.recoveryservices/vaults/backuprecoveryvault-westeurope-1-rsv/backuppolicies/backup-7d-4w-1m-0y"
