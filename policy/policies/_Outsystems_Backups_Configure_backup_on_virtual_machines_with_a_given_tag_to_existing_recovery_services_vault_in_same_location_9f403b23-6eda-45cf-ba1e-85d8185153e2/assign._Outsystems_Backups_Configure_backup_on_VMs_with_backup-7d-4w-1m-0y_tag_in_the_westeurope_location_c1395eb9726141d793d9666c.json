@@ -1,0 +1,50 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "c096727e-0f9b-4718-a35e-f32f4cd4366e",
+  "tenantId": "1e7930e6-1ca4-40df-ac06-adabc2b139a3",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "[Outsystems] [Backups] Configure backup on VMs with backup-7d-4w-1m-0y tag in the westeurope location",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/5d71f343-5ae1-4184-b34e-4ad83659b17b/providers/Microsoft.Authorization/policyDefinitions/9f403b23-6eda-45cf-ba1e-85d8185153e2",
+  "scope": "/subscriptions/597f5083-f841-4bfd-b55c-52171610014b",
+  "notScopes": [],
+  "parameters": {
+   "vaultLocation": {
+    "value": "westeurope"
+   },
+   "inclusionTagName": {
+    "value": "backup"
+   },
+   "inclusionTagValue": {
+    "value": [
+     "backup-7d-4w-1m-0y"
+    ]
+   },
+   "backupPolicyId": {
+    "value": "/subscriptions/597f5083-f841-4bfd-b55c-52171610014b/resourcegroups/backupvault-westeurope-1-rg/providers/microsoft.recoveryservices/vaults/backuprecoveryvault-westeurope-1-rsv/backuppolicies/backup-7d-4w-1m-0y"
+   }
+  },
+  "description": "",
+  "metadata": {
+   "assignedBy": "Ruben Jesus",
+   "parameterScopes": {
+    "vaultLocation": "/subscriptions/597f5083-f841-4bfd-b55c-52171610014b",
+    "backupPolicyId": "/subscriptions/597f5083-f841-4bfd-b55c-52171610014b/resourcegroups/backupvault-westeurope-1-rg/providers/microsoft.recoveryservices/vaults/backuprecoveryvault-westeurope-1-rsv"
+   },
+   "createdBy": "0439fb85-53a1-49c5-88ee-77bc59f1c1ca",
+   "createdOn": "2021-06-01T09:03:03.8617993Z",
+   "updatedBy": "0439fb85-53a1-49c5-88ee-77bc59f1c1ca",
+   "updatedOn": "2021-06-01T09:03:42.9391188Z"
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/597f5083-f841-4bfd-b55c-52171610014b/providers/Microsoft.Authorization/policyAssignments/c1395eb9726141d793d9666c",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "c1395eb9726141d793d9666c",
+ "location": "westeurope"
+}
